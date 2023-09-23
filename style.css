@@ -1,0 +1,136 @@
+@font-face {
+  font-family: glitch;
+  src: url(Font/Doctor\ Glitch.otf);
+}
+
+@font-face {
+  font-family: ow;
+  src: url(Font/big_noodle_titling_oblique.ttf);
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+/*Header*/
+.title {
+  text-align: center;
+  margin: 0;
+  background-color: black;
+  color: white;
+}
+
+h1 {
+  font-size: 150px;
+  font-family: Impact;
+}
+
+h2 {
+  font-family: glitch;
+  color: #5d3899;
+  font-size: 100px;
+}
+
+.title p {
+  font-size: 30px;
+}
+
+p {
+  font-family: ow;
+}
+
+.icons {
+  display: block;
+  text-align: center;
+}
+
+.icons li {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  transition: 0.5s all;
+  margin: 0 0.5%;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.icons li:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 20px #5d3899) drop-shadow(0 0 20px #5d3899); /* Updated drop-shadow function */
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  margin-top: 30px;
+}
+
+/*Body*/
+.projects {
+  padding-top: 10%;
+  background-image: linear-gradient(black, white 20%);
+}
+
+.projects p {
+  color: black;
+  font-size: 30px;
+  width: 65%;
+  justify-content: center;
+  margin-top: 2%;
+}
+.img-fluid {
+  transition: 0.5s;
+}
+.img-fluid:hover {
+  transform: scale(1.1);
+}
+
+/*Footer*/
+
+footer {
+  background-color: black;
+  height: 15vh;
+  font-size: 15px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer a {
+  text-decoration: none;
+  color: #ffffff;
+}
+footer a:hover {
+  color: #5d3899;
+}
+
+/*Breakpoints*/
+
+@media (max-width: 1600px) {
+  .projects p {
+    font-size: 25px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  h1 {
+    font-size: 75px;
+  }
+
+  h2 {
+    font-size: 50px;
+  }
+
+  .title p {
+    font-size: 12px;
+  }
+
+  .icon {
+    width: 45px;
+    height: 45px;
+    margin-top: 20px;
+  }
+}
