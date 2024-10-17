@@ -69,7 +69,11 @@ p {
 /*Body*/
 .projects {
   padding-top: 10%;
-  background-image: linear-gradient(black, white 20%);
+  background-image: linear-gradient(black, white 10%);
+}
+
+.projects02 {
+  background-color: #ffffff;
 }
 
 .projects p {
