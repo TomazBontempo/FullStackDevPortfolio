@@ -204,12 +204,11 @@ a:hover {
 }
 
 /* ---------- Projects ---------- */
-/* The black hero fades into the white page, full width */
+/* The black hero fades into the white page behind the first project,
+   as in the original design (padding-top 10%, white at 10% of the height) */
 main {
-  --fade: clamp(9rem, 22vw, 20rem);
-  padding: calc(var(--fade) + clamp(0.5rem, 2vw, 1.5rem)) var(--page-pad)
-    clamp(3rem, 8vw, 6rem);
-  background: linear-gradient(var(--ink), var(--paper) var(--fade)) no-repeat;
+  padding: 10% var(--page-pad) clamp(3rem, 8vw, 6rem);
+  background-image: linear-gradient(var(--ink), var(--paper) 10%);
 }
 
 .project {
@@ -227,6 +226,14 @@ main {
 
 .project-flip .project-media {
   order: 2;
+}
+
+/* Two-column layout: the fade runs behind the first mockup, so its text
+   starts lower to keep the violet title on the light part of the fade */
+@media (min-width: 861px) {
+  .project:first-child .project-body {
+    padding-top: clamp(8rem, 9vw, 10rem);
+  }
 }
 
 .project-media img {
