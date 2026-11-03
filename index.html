@@ -32,45 +32,131 @@
     </header>
       
 
-    <div class="px-5 projects">
-      <div class="row d-flex justify-content-around py-5">
+    <main class="px-5 projects">
+      <!-- Haplotificador-inator + Nexusficador-inator -->
+      <section class="row align-items-center py-5">
         <div class="col-md">
-          <a href="https://sample.guiadoconsumidorinteligente.com/" target="_blank"><img src="imgs/cgi.png" class="img-fluid" alt="GCI mockup" /></a>
+          <a href="https://haplotificador-inator.vercel.app" target="_blank"><img src="imgs/haplo.png" class="img-fluid" alt="Haplotificador-inator haplotype network on a laptop and Nexusficador-inator on a phone" /></a>
         </div>
         <div class="col-md d-flex justify-content-center">
-          <p>
-            This webpage uses an automated mailing system to distribute free
-            E-book samples. Users enter their email, triggering a sales funnel
-            in the backend hosted with AWS. It sends three emails, one per day.
-            First with the sample and purchase link, followed by second as a
-            reminder and, If the sale is not closed, a final email offers a
-            generous discount after confirming the sale was no close by
-            requesting the clients list from the store's API.
-            <br>Repositories: <a href="https://github.com/TomazBontempo/GCIfreeSamplePage" target="_blank">Sample page</a> & 
-            <a href="https://github.com/TomazBontempo/gciAwsServer" target="_blank">AWS server</a>
-          </p>
+          <div class="project-text">
+            <h3>Haplotificador-inator <span>&amp;</span> Nexusficador-inator</h3>
+            <p>
+              My Computer Science thesis at UVA: a browser port of PopART, the
+              C++/Qt desktop app used in population genetics. It infers and draws
+              haplotype networks with four algorithms (MSN, MJN, TCS and IntNJ),
+              matching PopART's output on the tested datasets, entirely
+              client-side: interactive editing, PNG/SVG/PDF export, autosave in
+              IndexedDB and undo/redo. Its companion tool turns FASTA sequences
+              into the NEXUS files the network reads, detecting haplotypes and
+              sampling locations along the way.
+            </p>
+            <p class="links">
+              Haplotificador: <a href="https://haplotificador-inator.vercel.app" target="_blank">Live app</a> &middot;
+              <a href="https://github.com/TomazBontempo/haplotificador-inator" target="_blank">Repository</a><br>
+              Nexusficador: <a href="https://nexusficador-inator.vercel.app" target="_blank">Live app</a> &middot;
+              <a href="https://github.com/TomazBontempo/Nexusficador-inator" target="_blank">Repository</a>
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="row py-5">
-        <div class="col-md order-md-2 ">
-          <a href="https://tomazbontempo.github.io/onebitcode-institutional-site/" target="_blank"><img src="imgs/gc.png" class="img-fluid" alt="GC new products mockup" /></a>
+      </section>
+
+      <!-- Need or Greed -->
+      <section class="row align-items-center py-5">
+        <div class="col-md order-md-2">
+          <a href="https://needorgreed.blog" target="_blank"><img src="imgs/needorgreed.png" class="img-fluid" alt="Need or Greed blog on a laptop and a phone" /></a>
         </div>
         <div class="col-md order-md-1 d-flex justify-content-center">
+          <div class="project-text">
+            <h3>Need or Greed</h3>
             <p>
-              This is an institutional website designed to showcase products,
-              services, events, and anything a company wants to highlight. It's
-              100% responsive with a modern design and animations, demonstrating
-              proficiency with frameworks like Bootstrap, besides Sass, CSS, HTML,
-              and AOS effects library.<br><a href="https://github.com/TomazBontempo/onebitcode-institutional-site" target="_blank">Repository</a>
-          </p>
+              A review blog for games, films, series and anime, where every work
+              is graded like RPG loot. It's a static Astro site written through a
+              Keystatic CMS with GitHub login, built and served by a Cloudflare
+              Worker that also picks the reader's language (English, Portuguese
+              or Spanish). Comments are self-hosted on Cloudflare Workers and D1,
+              adapted from the open-source Garrul.
+            </p>
+            <p class="links">
+              <a href="https://needorgreed.blog" target="_blank">Live site</a> &middot;
+              <a href="https://github.com/TomazBontempo/needorgreed.blog" target="_blank">Repository</a>
+            </p>
+          </div>
         </div>
-    </div>
-    </div>
+      </section>
+
+      <!-- Palworld dedicated server -->
+      <section class="row align-items-center py-5">
+        <div class="col-md">
+          <img src="imgs/palworld.png" class="img-fluid" alt="Terminal showing the systemd units of the Palworld server" />
+        </div>
+        <div class="col-md d-flex justify-content-center">
+          <div class="project-text">
+            <h3>Palworld Dedicated Server</h3>
+            <p>
+              A game server I run on Fedora Linux for a group of players. It runs
+              as a systemd service under its own user, with a daily maintenance
+              timer that warns players and saves the world through the server's
+              REST API, then updates through SteamCMD and restarts. A custom DDNS
+              client keeps the domain pointed at a dynamic home IP through the
+              Hostinger API, with port forwarding, a firewall and an admin API
+              kept off the internet. Everything is managed over SSH and
+              documented in runbooks, so the server can be rebuilt from scratch.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- GCI sales funnel -->
+      <section class="row align-items-center py-5">
+        <div class="col-md order-md-2">
+          <a href="https://github.com/TomazBontempo/gciAwsServer" target="_blank"><img src="imgs/cgi.png" class="img-fluid" alt="Guia do Consumidor Inteligente free sample page on a laptop and a phone" /></a>
+        </div>
+        <div class="col-md order-md-1 d-flex justify-content-center">
+          <div class="project-text">
+            <h3>E-book Sales Funnel</h3>
+            <p>
+              An automated email funnel for an e-book. When a visitor asks for a
+              free sample, a Node.js and Express server on AWS sends three emails
+              over three days through Nodemailer and Gmail with Google OAuth2:
+              the sample with a purchase link, then a reminder, and finally a
+              discount offer, sent only after checking the Hotmart sales API to
+              confirm the visitor hasn't bought yet.
+            </p>
+            <p class="links">
+              <a href="https://github.com/TomazBontempo/gciAwsServer" target="_blank">Repository</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Institutional site -->
+      <section class="row align-items-center py-5">
+        <div class="col-md">
+          <a href="https://tomazbontempo.github.io/onebitcode-institutional-site/" target="_blank"><img src="imgs/gc.png" class="img-fluid" alt="Games Credits institutional site on a laptop and a phone" /></a>
+        </div>
+        <div class="col-md d-flex justify-content-center">
+          <div class="project-text">
+            <h3>Institutional Website</h3>
+            <p>
+              An institutional website designed to showcase products, services,
+              events and anything a company wants to highlight. It's fully
+              responsive, with a modern design and animations, built with
+              Bootstrap, Sass, CSS, HTML and the AOS effects library.
+            </p>
+            <p class="links">
+              <a href="https://tomazbontempo.github.io/onebitcode-institutional-site/" target="_blank">Live site</a> &middot;
+              <a href="https://github.com/TomazBontempo/onebitcode-institutional-site" target="_blank">Repository</a>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <!-- Footer -->
     <footer class="container-fluid text-white text-center">
       <div class="text-center contact d-flex flex-column flex-md-row justify-content-md-center">
-        <span class="me-4 mb-2 mb-md-0"> Tomaz Bontempo &copy;2023</span>
+        <span class="me-4 mb-2 mb-md-0"> Tomaz Bontempo &copy;2026</span>
         <a class="me-4 mb-2 mb-md-0" href="mailto:tomaz.bontempo@gmail.com">E-mail: tomaz.bontempo@gmail.com</a>
         <a href="https://wa.me/5521981746781" target="_blank">Phone: +55 (21) 9 8174-6781</a>
       </div>

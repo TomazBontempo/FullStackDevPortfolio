@@ -72,12 +72,33 @@ p {
   background-image: linear-gradient(black, white 10%);
 }
 
+.project-text {
+  width: 65%;
+  margin-top: 2%;
+}
+
+.projects h3 {
+  font-family: ow;
+  font-size: 50px;
+  color: #5d3899;
+  margin-bottom: 12px;
+}
+
+.projects h3 span {
+  color: black;
+}
+
 .projects p {
   color: black;
   font-size: 30px;
-  width: 65%;
-  justify-content: center;
-  margin-top: 2%;
+}
+
+.projects .links {
+  font-size: 26px;
+}
+
+.projects a {
+  color: #5d3899;
 }
 .img-fluid {
   transition: 0.5s;
@@ -109,9 +130,16 @@ footer a:hover {
 /*Breakpoints*/
 
 @media (max-width: 1600px) {
+  .project-text {
+    width: 100%;
+  }
+
   .projects p {
     font-size: 25px;
-    width: 100%;
+  }
+
+  .projects h3 {
+    font-size: 40px;
   }
 }
 
