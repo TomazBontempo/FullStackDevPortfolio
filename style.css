@@ -124,6 +124,56 @@ a:hover {
   top: 1rem;
 }
 
+/* ---------- Language switcher ----------
+   Fixed top-right "watermark": a mid violet that reads on both the black
+   and the white sections (4.6:1 on black, 4.55:1 on white), faded until hovered/focused. */
+.lang {
+  --lang-color: #8760d0;
+  position: fixed;
+  top: clamp(0.75rem, 2vw, 1.25rem);
+  right: clamp(0.75rem, 2vw, 1.25rem);
+  z-index: 20;
+  display: flex;
+  border: 1.5px solid var(--lang-color);
+  border-radius: 999px;
+  opacity: 0.7;
+  transition: opacity 0.25s var(--ease-out);
+}
+
+.lang:hover,
+.lang:focus-within {
+  opacity: 1;
+}
+
+.lang a {
+  display: grid;
+  place-items: center;
+  min-width: 44px;
+  min-height: 36px;
+  padding: 0 0.7rem;
+  border-radius: 999px;
+  color: var(--lang-color);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+}
+
+.lang a[aria-current="page"] {
+  background: var(--lang-color);
+  color: var(--paper);
+}
+
+.lang a:not([aria-current]):hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+.lang a:focus-visible {
+  outline: 2px solid var(--lang-color);
+  outline-offset: 2px;
+}
+
 /* ---------- Buttons ---------- */
 .actions {
   display: flex;
